@@ -30,7 +30,6 @@ class App extends Component {
     }).then(() => {
       let randomNum = Math.floor(Math.random() * 211)
       let randomQuote = this.state.quotes[randomNum]
-      console.log('something to test')
       return this.setState({currentQuote:randomQuote})
     })
   }
@@ -53,7 +52,6 @@ class App extends Component {
                   <Typography variant="h5" component="h2" id="author">
                     - {this.state.currentQuote.author ? this.state.currentQuote.author : 'some author'}
                   </Typography>
-
                 </CardContent>
               </CardActionArea>
               <CardActions>
