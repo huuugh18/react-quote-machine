@@ -50,7 +50,7 @@ class App extends Component {
                     "{this.state.currentQuote.quote ? this.state.currentQuote.quote : 'placeholder'}"
                   </Typography>
                   <Typography variant="h5" component="h2" id="author">
-                    - {this.state.currentQuote.author ? this.state.currentQuote.author : 'some author'}
+                    - {this.state.currentQuote.author ? this.state.currentQuote.author + ` #${this.state.currentQuote.id}` : 'some author'}
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -58,8 +58,8 @@ class App extends Component {
                 <Button size="small" color="primary" id="new-quote" onClick={this.handleClick}>
                   New Quote
                 </Button>
-                <Button size="small" color="primary"  href="twitter.com/intent/tweet" id="tweet-quote">
-                  Tweet
+                <Button  size="small" color="primary"  href={`https://twitter.com/intent/tweet?text=${this.state.currentQuote.quote}`} id="tweet-quote">
+                  Tweet It
                 </Button>
               </CardActions>
             </Card>
