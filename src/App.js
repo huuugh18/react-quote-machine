@@ -30,6 +30,7 @@ class App extends Component {
     }).then(() => {
       let randomNum = Math.floor(Math.random() * 211)
       let randomQuote = this.state.quotes[randomNum]
+      console.log('something to test')
       return this.setState({currentQuote:randomQuote})
     })
   }
